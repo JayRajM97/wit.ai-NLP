@@ -1,3 +1,4 @@
+import os, sys
 from flask import Flask, request
 app = Flask(__name__)
 
@@ -11,6 +12,17 @@ def verify():
         return request.args["hub.challenge"], 200
     return "Hey", 200
 
+
+@app.route('/',methods=['POST'])
+def webhook():
+    data = request.get_json()
+    log(data)
+
+    return "ALRIGHT!", 200
+
+def log(message):
+    print(message)
+    sys.stdout.flush()
 
 
 '''
