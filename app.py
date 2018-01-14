@@ -9,7 +9,7 @@ def verify():
         if not request.args.get("hub.verify_token") == "HELLO":
             return "Verification Token Mismatch!", 403
         return request.args["hub.challenge"], 200
-    return "All Set?", 200
+    return "helllo@1234567890@!@#$%^&*()", 200
 
 
 
