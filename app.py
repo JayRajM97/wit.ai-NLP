@@ -6,7 +6,7 @@ from pymessenger import Bot
 app = Flask(__name__)
 
 
-PAGE_ACCESS_TOKEN = "EAAbqd2mzriwBAHwhUk2pEYMwJm64s63uEjfXHMbPFwJPoUZAe9y4g7MK4KFMPXtDxUccbaHyOgxqXzOiZADvP7C0LbuQrVn91lKzO50tgcJiHZBrHyavAazgKZA1p4d618JuZAccdn3qT1qZA93QO1LV8FdDF5Xqr6ffqTLLq2QgZDZD"
+PAGE_ACCESS_TOKEN = "EAAbqd2mzriwBADGeih5R8l2pAvAjKaxfX3AUmv3tm2uIYGLYiHnk3iHH8Fu5DDRMrOjcqRuW3tdGsxxFIXeql3IdPJv27ZB1wGGlu0tHt5rp74LAeiiUoZBmbfcdpQBoT6bsOMD7wwUUrUYVs6wnkTJOVhSXWHZBFvzt9cxFAZDZD"
 bot = Bot(PAGE_ACCESS_TOKEN)
 
 
@@ -31,7 +31,7 @@ def webhook():
 
                 # IDs
                 sender_id = messaging_event['sender']['id']
-                recipient_id = messaging_event['recipient']['id']
+                # recipient_id = messaging_event['recipient']['id']
 
                 if messaging_event.get('message'):
                     # Extracting text message
