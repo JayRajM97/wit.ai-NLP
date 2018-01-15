@@ -42,7 +42,7 @@ def webhook():
 
                     # Echo
                     response = messaging_text
-                    bot.send_text_message(recipient_id, response)
+                    bot.send_text_message(sender_id, response)
 
     return "ALRIGHT!",    200
 
