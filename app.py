@@ -31,7 +31,7 @@ def webhook():
 
                 # IDs
                 sender_id = messaging_event['sender']['id']
-                # recipient_id = messaging_event['recipient']['id']
+                recipient_id = messaging_event['recipient']['id']
 
                 if messaging_event.get('message'):
                     # Extracting text message
