@@ -17,7 +17,7 @@ def verify():
         if not request.args.get("hub.verify_token") == "secret":
             return "Verification Token Mismatch!", 403
         return request.args["hub.challenge"], 200
-    return "Hey", 200   
+    return "Hey", 200
 
 
 @app.route('/', methods=['POST'])
