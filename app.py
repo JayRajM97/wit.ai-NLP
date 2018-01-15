@@ -1,6 +1,6 @@
 import os, sys
 from flask import Flask, request
-from pymessenger import Bot
+from pymessenger.bot import Bot
 
 
 app = Flask(__name__)
@@ -17,7 +17,7 @@ def verify():
         if not request.args.get("hub.verify_token") == "secret":
             return "Verification Token Mismatch!", 403
         return request.args["hub.challenge"], 200
-    return "Hey", 200
+    return "Hey", 200   
 
 
 @app.route('/', methods=['POST'])
