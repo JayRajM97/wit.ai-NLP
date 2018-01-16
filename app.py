@@ -1,6 +1,9 @@
 import os, sys
 from flask import Flask, request
 from pymessenger.bot import Bot
+from prompt_toolkit import prompt
+from prompt_toolkit.history import InMemoryHistory
+INTERACTIVE_PROMPT = '> '
 
 
 app = Flask(__name__)
@@ -46,6 +49,28 @@ def webhook():
                     bot.send_text_message(sender_id, response)
                     '''
     return "ALRIGHT!",    200
+
+def interactive(self, context=None):
+    """Runs interactive command line chat between user and bot. Runs
+        indefinitely until EOF is entered to the prompt.
+        context -- optional initial context. Set to {} if omitted
+    """
+    if context is None:
+            context = {}
+
+    # input/raw_input are not interchangeable between Python 2 and 3
+    try:
+        input_function = input
+    except NameError:
+        input_function = input
+
+    history = InMemoryHistory()
+    while True:
+        try:
+            message = prompt(INTERACTIVE_PROMPT, history=history, mouse_support=True).rstrip()
+        except (KeyboardInterrupt, EOFError):
+            return
+        print(self.message(message, context))
 
 
 def log(message):
