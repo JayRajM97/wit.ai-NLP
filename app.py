@@ -42,10 +42,8 @@ def webhook():
                         messaging_text = 'no text'
 
                     # Echo
-                    '''
                     response = messaging_text
                     bot.send_text_message(sender_id, response)
-                    '''
     return "ALRIGHT!",    200
 '''
 def interactive(self, context=None):
