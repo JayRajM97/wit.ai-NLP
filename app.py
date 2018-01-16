@@ -1,9 +1,7 @@
 import os, sys
 from flask import Flask, request
 from pymessenger.bot import Bot
-from prompt_toolkit import prompt
-from prompt_toolkit.history import InMemoryHistory
-INTERACTIVE_PROMPT = '> '
+
 
 
 app = Flask(__name__)
@@ -49,7 +47,7 @@ def webhook():
                     bot.send_text_message(sender_id, response)
                     '''
     return "ALRIGHT!",    200
-
+'''
 def interactive(self, context=None):
     """Runs interactive command line chat between user and bot. Runs
         indefinitely until EOF is entered to the prompt.
@@ -71,7 +69,7 @@ def interactive(self, context=None):
         except (KeyboardInterrupt, EOFError):
             return
         print(self.message(message, context))
-
+'''
 
 def log(message):
     print(message)
