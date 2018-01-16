@@ -66,6 +66,5 @@ wcwidth==0.1.7
 webencodings==0.5.1
 widgetsnbextension==3.1.0
 wit==4.3.0
-xdiagnose==3.8.4.1
 xkit==0.0.0
 XlsxWriter==0.7.3
