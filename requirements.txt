@@ -24,7 +24,7 @@ jupyter-client==5.2.1
 jupyter-console==5.2.0
 jupyter-core==4.4.0
 lxml==3.5.0
-Mako==1.0.3
+Mako==1.2.2
 MarkupSafe==0.23
 mistune==0.8.3
 nbconvert==5.3.1
